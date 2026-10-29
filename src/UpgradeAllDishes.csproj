@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+    <AssemblyName>UpgradeAllDishes</AssemblyName>
+    <EnableNETAnalyzers>false</EnableNETAnalyzers>
+    <ReferenceRoot Condition="'$(ReferenceRoot)' == ''">$(GamePath)/BepInEx</ReferenceRoot>
+    <CoreRoot Condition="'$(CoreRoot)' == ''">$(ReferenceRoot)/core</CoreRoot>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="$(CoreRoot)/BepInEx.Core.dll"><Private>false</Private></Reference>
+    <Reference Include="$(CoreRoot)/BepInEx.Unity.IL2CPP.dll"><Private>false</Private></Reference>
+    <Reference Include="$(CoreRoot)/Il2CppInterop.Runtime.dll"><Private>false</Private></Reference>
+    <Reference Include="$(CoreRoot)/0Harmony.dll"><Private>false</Private></Reference>
+    <Reference Include="$(ReferenceRoot)/interop/*.dll"><Private>false</Private></Reference>
+  </ItemGroup>
+  <Target Name="CheckGame" BeforeTargets="ResolveReferences">
+    <Error Condition="!Exists('$(ReferenceRoot)/interop/Assembly-CSharp.dll')" Text="Execute o jogo com BepInEx uma vez para gerar BepInEx/interop. Informe -p:GamePath=PASTA_DO_JOGO." />
+  </Target>
+</Project>
+

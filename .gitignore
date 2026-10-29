@@ -1,0 +1,8 @@
+**/bin/
+**/obj/
+dist/
+GamePath.user.props
+*.user
+*.log
+*.dll
+*.zip

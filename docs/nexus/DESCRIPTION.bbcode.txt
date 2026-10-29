@@ -1,0 +1,25 @@
+[size=5][b]Upgrade All Dishes — Experimental[/b][/size]
+Enhance multiple restaurant dishes by one level after reviewing their combined ingredient cost.
+
+[b]Features[/b]
+[list]
+[*]Compact grid with native dish icons and ingredient icons.
+[*]Only lists learned recipes with enough ingredients for their next enhancement.
+[*]Automatic selection reserves shared stock. You can change the selection before confirming.
+[*]Portuguese/English UI follows game settings.
+[*]Uses normal ingredient costs and the original enhancement routine.
+[/list]
+[b]Requirements and installation[/b]
+Windows x64 / Steam. Install BepInEx 6 Unity IL2CPP x64 separately and run the game once. Close the game, then extract this archive into the game folder. The DLL belongs in BepInEx/plugins/UpgradeAllDishes/. Open the restaurant recipe menu and choose Enhance all.
+
+[b]Experimental status[/b]
+Back up your save. Fifteen automated planning tests pass; the complete permanent-spending batch has not been validated end to end. English UI paths are implemented but full English gameplay, controller support, DLC-specific menus and other-mod compatibility have not been validated. If a batch fails partway through, completed upgrades remain. Removing the mod does not undo upgrades or ingredient use.
+
+[b]AI DISCLOSURE[/b]
+Substantial C# code, UI layout, Portuguese/English strings, tests and documentation were generated using OpenAI Codex, under JoaoPPolli's direction. The mod-page text was also prepared using AI. No AI-generated images, voices or music are included. Native icons/fonts are loaded from your game. The plugin contains no AI runtime, telemetry or online inference.
+
+[b]Uninstall[/b]
+Close the game and remove BepInEx/plugins/UpgradeAllDishes/.
+
+[b]Credits and permissions[/b]
+JoaoPPolli; OpenAI Codex (AI-generated implementation); BepInEx, HarmonyX, Il2CppInterop. DaveDiverExpansion examples were consulted. Independent, unofficial mod. Contact the author before redistribution or adapted uploads. Game assets and dependencies retain their own rights.
